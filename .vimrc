@@ -1,3 +1,22 @@
+set nocompatible               " be iMproved
+filetype off                   " required!
+filetype plugin indent off     " required!
+
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  call neobundle#rc(expand('~/.vim/bundle/'))
+endif
+" let NeoBundle manage NeoBundle
+" required! 
+NeoBundle 'Shougo/neobundle.vim'
+" recommended to install
+NeoBundle 'Shougo/vimproc'
+" after install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
+"NeoBundle 'Shougo/vimshell'
+"NeoBundle 'Shougo/unite.vim'
+"
+filetype plugin indent on     " required!
+
 "---------------------------------------------------------------------------
 " インデントに関する設定
 
@@ -82,14 +101,3 @@ set hlsearch
 
 " 検索時にファイルの最後まで行ったら最初に戻る (nowrapscan:戻らない)
 set wrapscan
-
-"---------------------------------------------------------------------------
-" ファイルタイプに関する設定:
-"
-" ファイル形式の検出を有効化
-filetype on
-
-filetype indent on
-
-filetype plugin on
-
