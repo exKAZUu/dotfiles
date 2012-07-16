@@ -12,8 +12,10 @@ NeoBundle 'Shougo/neobundle.vim'
 " recommended to install
 NeoBundle 'Shougo/vimproc'
 " after install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
-"NeoBundle 'Shougo/vimshell'
-"NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'ynkdir/vim-guess'
 "
 filetype plugin indent on     " required!
 
@@ -101,3 +103,12 @@ set hlsearch
 
 " 検索時にファイルの最後まで行ったら最初に戻る (nowrapscan:戻らない)
 set wrapscan
+
+"---------------------------------------------------------------------------
+" エンコーディング
+set fileencodings=iso-2022-jp-3,iso-2022-jp,euc-jisx0213,euc-jp,utf-8,ucs-bom,euc-jp,eucjp-ms,cp932
+set encoding=utf-8
+
+"---------------------------------------------------------------------------
+" キーバインド
+nnoremap <space><space> :source ~/.vimrc<CR>
