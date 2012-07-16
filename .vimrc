@@ -14,6 +14,7 @@ NeoBundle 'Shougo/vimproc'
 " after install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neocomplcache'
 
 filetype plugin indent on     " required!
 
