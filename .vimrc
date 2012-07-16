@@ -7,7 +7,7 @@ if has('vim_starting')
   call neobundle#rc(expand('~/.vim/bundle/'))
 endif
 " let NeoBundle manage NeoBundle
-" required! 
+" required!
 NeoBundle 'Shougo/neobundle.vim'
 " recommended to install
 NeoBundle 'Shougo/vimproc'
@@ -15,7 +15,7 @@ NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'ynkdir/vim-guess'
+" NeoBundle 'ynkdir/vim-guess'
 "
 filetype plugin indent on     " required!
 
