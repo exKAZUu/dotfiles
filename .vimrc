@@ -15,6 +15,14 @@ NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'tomtom/tcomment_vim'
+NeoBundle 'ujihisa/unite-colorscheme'
+" color schemas
+NeoBundle 'tomasr/molokai'
+NeoBundle 'fugalh/desert.vim'
+NeoBundle 'altercation/solarized'
 " NeoBundle 'ynkdir/vim-guess'
 "
 filetype plugin indent on     " required!
@@ -62,6 +70,9 @@ syntax on
 " 見やすい色を表示するようにVimに背景色を教える
 set background=dark
 
+" カラースキーマを設定
+colorscheme molokai
+
 " ウィンドウの幅を超える行の折り返さない (wrap:折り返す)
 set nowrap
 
@@ -108,6 +119,11 @@ set wrapscan
 " エンコーディング
 set fileencodings=iso-2022-jp-3,iso-2022-jp,euc-jisx0213,euc-jp,utf-8,ucs-bom,euc-jp,eucjp-ms,cp932
 set encoding=utf-8
+
+"---------------------------------------------------------------------------
+" indent-guides
+
+let g:indent_guides_enable_on_vim_startup = 1
 
 "---------------------------------------------------------------------------
 " キーバインド
