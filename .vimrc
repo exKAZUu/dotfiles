@@ -130,7 +130,12 @@ let g:indent_guides_enable_on_vim_startup = 1
 
 "---------------------------------------------------------------------------
 " キーバインド
+" Reload .vimrc
 nnoremap <space><space> :source ~/.vimrc<CR>
+" Replace default completion with neocomplcache
+inoremap <expr><C-n> neocomplcache#manual_keyword_complete()
+" Invoke omni completion
+inoremap <expr><C-Space> neocomplcache#manual_omni_complete()
 
 " --------------------------------------------------
 " NeoComplCache
@@ -181,6 +186,7 @@ inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplcache#close_popup()
 inoremap <expr><C-e>  neocomplcache#cancel_popup()
+
 
 " AutoComplPop like behavior.
 "let g:neocomplcache_enable_auto_select = 1
