@@ -1,11 +1,12 @@
-set nocompatible               " be iMproved
-filetype off                   " required!
-filetype plugin indent off     " required!
+set nocompatible               " Be iMproved
+filetype off                   " Required!
 
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
-  call neobundle#rc(expand('~/.vim/bundle/'))
 endif
+
+call neobundle#rc(expand('~/.vim/bundle/'))
+
 " let NeoBundle manage NeoBundle
 " required!
 NeoBundle 'Shougo/neobundle.vim'
@@ -14,7 +15,7 @@ NeoBundle 'Shougo/vimproc'
 " after install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/neocomplcache-snippets-complete'
+NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'kchmck/vim-coffee-script'
@@ -30,8 +31,21 @@ NeoBundle 'tomasr/molokai'
 NeoBundle 'fugalh/desert.vim'
 NeoBundle 'altercation/solarized'
 " NeoBundle 'ynkdir/vim-guess'
+
+filetype plugin indent on     " Required!
 "
-filetype plugin indent on     " required!
+" Brief help
+" :NeoBundleList          - list configured bundles
+" :NeoBundleInstall(!)    - install(update) bundles
+" :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+
+" Installation check.
+if neobundle#exists_not_installed_bundles()
+  echomsg 'Not installed bundles : ' .
+        \ string(neobundle#get_not_installed_bundle_names())
+  echomsg 'Please execute ":NeoBundleInstall" command.'
+  "finish
+endif
 
 "---------------------------------------------------------------------------
 " インデントに関する設定
