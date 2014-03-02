@@ -1,9 +1,7 @@
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH=$HOME/.nodebrew/current/bin:$PATH
-
 nodebrew use latest
 
-alias ga="git add -A"
+eval "$(rbenv init -)"
 
 alias ga="git add -A"
 alias gc="git commit -m"
